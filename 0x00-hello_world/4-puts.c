@@ -1,9 +1,15 @@
 #include <stdio.h>
 
-/*this is the beginning of my code*/
+/**
+ *main - this is the starting point 
+ *
+ *Description: This program prints a string
+ *@void: return nothing after compiling
+ *
+ *return:returns 0 if the codes run sucessfully
+*/
 int main(void)
 {
-	/* i brought the \ because i wanted to escape "*/
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
