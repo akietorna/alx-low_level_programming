@@ -3,3 +3,5 @@
 2-assembly => compiles the file into assembly language
 3-name => compiles and create an executable file named cisfun
 4-puts.c => a c program that outputs a string
+5-printf => prints a string followed by a newline
+6-size.c => prints the size of the types in C
