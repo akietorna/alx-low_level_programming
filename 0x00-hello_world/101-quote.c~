@@ -1,0 +1,7 @@
+#include <stdio.h>
+/**
+ *main - entry point to the program
+ *write - helps to output in place of printf
+ *Description: Outputing without using the printf
+ *Return 1 which output to standard error
+ */
