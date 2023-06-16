@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Entry point 
- * 
  *Description: 'prints a string'
  *@parameter: use the printf function to print 
  *
