@@ -11,7 +11,9 @@
  *Return 0 which mean sucess
  */
 int write(int filedes, const char *buf, unsigned int nbyte)
+{
 	return (0);
+}
 
 int main(void)
 {
