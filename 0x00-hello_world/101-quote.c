@@ -7,7 +7,6 @@
  *@buf: is the buffer in which the string is written into
  *@nbyte: gives the number of bytes needed
  *Description: Outputing without using the printf
- *Description: replaces printf
  *Return 1 which output to standard error
  *Return 0 which mean success
  */
