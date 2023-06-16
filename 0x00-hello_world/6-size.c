@@ -2,16 +2,16 @@
 /**
  *main - starting point of the program
  *Description: print the size of types in c
- *@void: returns nothing at the end of the code
  *Return: Always 0 (success)
  */
-int main(void)
+int main()
 {
 	char a;
 	int b;
 	long int c;
 	long long int d;
 	float e;
+	
 	printf("Size of a char: %ld bytes(s)\n", sizeof(a));
 	printf("Size of an int: %ld bytes(s)\n", sizeof(b));
 	printf("Size of a long int: %ld bytes(s)\n", sizeof(c));
