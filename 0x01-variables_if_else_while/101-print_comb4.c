@@ -21,16 +21,19 @@ int main(void)
 
 			while (num3 <= '9')
 			{
-				if (num != num2 && num != num3 && num2 != num3 && num < num2 && num2 < num3 && num < '8' && num2 < '9')
+				if (num != num2 && num != num3 && num2 != num3)
 				{
-					putchar(num);
-					putchar(num2);
-					putchar(num3);
-
-					if (num != '7')
+					if (num < num2 && num2 < num3 && num < '8' && num2 < '9')
 					{
-						putchar(',');
-						putchar(' ');
+						putchar(num);
+						putchar(num2);
+						putchar(num3);
+
+						if (num != '7')
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 
