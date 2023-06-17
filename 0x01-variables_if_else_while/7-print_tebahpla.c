@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/**
+ *main - entry point into the program
+ *Description: listing alphabets in reverse order in lower case
+ *@void: expect nothing at the end of the code
+ *Return: Always 0 (success)
+ */
+
+int main(void)
+{
+	char my_alphabet = 'z';
+
+	while (my_alphabet >= 'a')
+	{
+		putchar(my_alphabet);
+		my_alphabet--;
+	}
+
+	putchar('\n');
+
+	return (0);
+}
