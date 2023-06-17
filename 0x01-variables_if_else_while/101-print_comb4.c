@@ -23,23 +23,23 @@ int main(void)
 			{
 				if (num != num2 && num != num3 && num2 != num3 && num < num2 && num2 < num3 && num < '8' && num2 < '9')
 				{
-					putchar(my_num);
-					putchar(my_num2);
-					putchar(my_num3);
+					putchar(num);
+					putchar(num2);
+					putchar(num3);
 
-					if (my_num != '7')
+					if (num != '7')
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
 
-				my_num3++;
+				num3++;
 			}
 
-			my_num2++;
+			num2++;
 		}
-		my_num++;
+		num++;
 	}
 
 	putchar('\n');
