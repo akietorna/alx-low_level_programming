@@ -21,14 +21,14 @@ int main(void)
 			{
 				putchar(my_num);
 				putchar(my_num2);
-				
+
 				if (my_num != '8')
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			
+
 			my_num2++;
 		}
 
