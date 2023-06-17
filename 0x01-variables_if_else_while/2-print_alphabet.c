@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+/**
+ *main - entry point into the program
+ *Description: listing alphabets in lower case
+ *@void: expect nothing at the end of the code
+ *Return: Always 0 (success)
+ */
+
+int main(void)
+{
+	for (char a = 'a'; a <= 'z'; a++)
+	{
+		putchar(a);
+		putchar('\n');
+	}
+
+	return (0);
+}
