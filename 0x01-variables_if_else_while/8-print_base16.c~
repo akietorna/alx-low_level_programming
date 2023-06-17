@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+/**
+ *main - entry point into the program
+ *Description: listing base 16 numbers
+ *@void: expect nothing at the end of the code
+ *Return: Always 0 (success)
+ */
+
+int main(void)
+{
+	int my_num = '0';
+
+	while (my_num < 16)
+	{
+		if (my_num >= 10)
+		{
+			char my_char = 'a';
+
+			while (my_char <= 'f')
+			{
+				putchar(my_char);
+				my_char++;
+				my_num++;
+			}
+		}
+		else
+		{
+			putchar(my_num);
+			my_num++;
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
+}
