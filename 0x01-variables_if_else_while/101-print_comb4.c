@@ -34,13 +34,13 @@ int main(void)
 					}
 				}
 
-				num3++;
+				c++;
 			}
 
-			num2++;
+			b++;
 		}
 
-		num++;
+		a++;
 	}
 
 	putchar('\n');
