@@ -9,31 +9,28 @@
 
 int main(void)
 {
-	int num = '0';
+	int a = '0';
 
-	while (num <= '9')
+	while (a <= '9')
 	{
-		int num2 = '1';
+		int b = '1';
 
-		while (num2 <= '9')
+		while (b <= '9')
 		{
-			int num3 = '2';
+			int c = '2';
 
-			while (num3 <= '9')
+			while (c <= '9')
 			{
-				if (num != num2 && num != num3 && num2 != num3)
+				if (a != b && a != c && b != c && a < b && b < c && a < '8' && b < '9')
 				{
-					if (num < num2 && num2 < num3 && num < '8' && num2 < '9')
+					putchar(a);
+					putchar(b);
+					putchar(c);
+
+					if (num != '7')
 					{
-						putchar(num);
-						putchar(num2);
-						putchar(num3);
-						
-						if (num != '7')
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						putchar(',');
+						putchar(' ');
 					}
 				}
 
