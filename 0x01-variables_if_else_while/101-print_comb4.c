@@ -9,19 +9,19 @@
 
 int main(void)
 {
-	int my_num = '0';
+	int num = '0';
 
-	while (my_num <= '9')
+	while (num <= '9')
 	{
-		int my_num2 = '1';
+		int num2 = '1';
 
-		while (my_num2 <= '9')
+		while (num2 <= '9')
 		{
-			int my_num3 = '2';
+			int num3 = '2';
 
-			while (my_num3 <= '9')
+			while (num3 <= '9')
 			{
-				if (my_num != my_num2 && my_num != my_num3 && my_num2 != my_num3 && my_num < my_num2 && my_num2 < my_num3 && my_num < '8' && my_num2 < '9')
+				if (num != num2 && num != num3 && num2 != num3 && num < num2 && num2 < num3 && num < '8' && num2 < '9')
 				{
 					putchar(my_num);
 					putchar(my_num2);
