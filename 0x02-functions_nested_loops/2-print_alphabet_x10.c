@@ -5,7 +5,7 @@
  *@void - return nothing
  */
 
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int my_char = 'a';
 	int a = 0;
