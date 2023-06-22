@@ -2,7 +2,7 @@
 
 /**
  *print_sign - tells if number is positive, zero or negative
- *@n - takes input number
+ *@n: takes input number
  *Return: 1 if positive, 0 if zero and -1 if negative
  */
 
