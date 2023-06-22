@@ -8,11 +8,12 @@
 
 void print_alphabet_x10(void)
 {
-	int my_char = 'a';
 	int num = 0;
 
 	while (num <= 9)
 	{
+		int mychar = 'a';
+
 		while (my_char <= 'z')
 		{
 			_putchar(my_char);
