@@ -10,5 +10,5 @@ int islower(int c);
 
 int _islower(int c)
 {
-	return (islower(w) ? 1 : 0);
+	return (islower(c) ? 1 : 0);
 }
