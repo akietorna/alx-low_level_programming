@@ -3,7 +3,7 @@
  *main - starting point of the program
  *Description - prints out the word _putchar
  *@void - returns nothing after the program runs
- *Returns - Always 0 (success)
+ *Return - Always 0 (success)
  */
 
 int main(void)
