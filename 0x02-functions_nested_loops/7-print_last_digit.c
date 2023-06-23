@@ -1,14 +1,16 @@
 #include "main.h"
+#include <stdlib>
 
 /**
  *_abs - prints absolute value of numbers
  *print_last_digit - prints the last digit of a number
- *@v: takes in a number
+ *@j: takes in a number
  *Return: the last digit
  */
-int _abs(int);
 
-int print_last_digit(int v)
+int abs(int j);
+
+int print_last_digit(int j)
 {
 	int a = _abs(v) % 10;
 	_putchar(a);
