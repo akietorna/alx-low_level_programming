@@ -14,8 +14,8 @@ int print_last_digit(int j)
 {
 	int a = abs(j) % 10;
 	int b = 0;
-	while (b <2)
-	{
+
+	while (b < 2)
 		return (a);
-	}
+
 }
