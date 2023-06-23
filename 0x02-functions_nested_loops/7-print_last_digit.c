@@ -16,6 +16,10 @@ int print_last_digit(int j)
 	int b = 0;
 
 	while (b < 2)
-		return (a);
+	{
+		_putchar(a);
+	}
+	
+	return (a);
 
 }
