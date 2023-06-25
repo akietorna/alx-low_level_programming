@@ -12,14 +12,9 @@ int abs(int j);
 
 int print_last_digit(int j)
 {
-	int a = abs(j) % 10;
-	int b = 0;
+	int last_char = abs(j) % 10;
 
-	while (b < 2)
-	{
-		_putchar(a);
-	}
-	
-	return (a);
+	_putchar(last_char + '0');
 
+	return (last_char);
 }

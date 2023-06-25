@@ -7,10 +7,10 @@
  *w - takes in a character
  *Return: Always 0(success)
  */
-int writes = write(int mvalue,char word,int len);
-int _putchar(char **c)
+
+int _putchar(char c)
 {
-	return(writes(1, &c, 1));
+	return(write(1, &c, 1));
 }
 
 
