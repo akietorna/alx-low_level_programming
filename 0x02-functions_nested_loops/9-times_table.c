@@ -2,9 +2,30 @@
 
 /**
  *times_table - prints nine times table
- *
+ *big_value: prints values bigger than nine
+ *@value: takes in the value
  *Return: Always 0(success)
  */
+
+
+void big_value(int value);
+
+void big_value(int value)
+{
+	if (value > 9)
+        {
+		int char_1 = (value / 10) % 10;
+		int char_2 = value % 10;
+
+                _putchar(char_1 + '0');
+                _putchar(char_2 + '0');
+	}
+        else
+	{
+		_putchar(value + '0');
+        }
+}
+
 
 void times_table(void)
 {
@@ -16,41 +37,15 @@ void times_table(void)
 
 		while (b <= 9)
 		{
-			int result;
+			int result = a * b;
 
 			if (b == 9)
 			{
-				result = a * b;
-				
-				if (result > 9)
-				{
-					int char_1 = (result / 10) % 10;
-					int char_2 = result % 10;
-					
-					_putchar(char_1 + '0');
-					_putchar(char_2 + '0');
-				}
-				else
-				{
-					_putchar(result + '0');
-				}
+				big_value(result);
 			}
 			else
 			{
-				result = a * b;
-
-				if (result > 9)
-                                {
-                                        int char_1 = ((result / 10) % 10);
-                                        int char_2 = result % 10;
-
-                                        _putchar(char_1 + '0');
-                                        _putchar(char_2 + '0');
-                                }
-				else
-				{
-					_putchar(result + '0');
-				}
+				big_value(result);
 
 				_putchar(',');
 				_putchar(' ');
@@ -60,7 +55,6 @@ void times_table(void)
 			b++;
 		}
 
-		_putchar('$');
 		_putchar('\n');
 		a++;
 	}
