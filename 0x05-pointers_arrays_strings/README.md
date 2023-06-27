@@ -1,0 +1,1 @@
+This project works on pointer, arrays and functions
