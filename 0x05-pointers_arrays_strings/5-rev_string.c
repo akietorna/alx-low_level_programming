@@ -15,7 +15,7 @@ void rev_string(char *s)
 
 	while (a >= 0)
 	{
-		char j = *(s + a);
+		char j = s[a];
 		_putchar(j);
 		a--;
 	}
