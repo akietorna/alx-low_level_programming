@@ -8,7 +8,7 @@
  *Return: the charather to be printed
  */
 
-int _putchar(char *j)
+int _putchar(char j)
 {
 	return (write(1,&j,1));
 }
