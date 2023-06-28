@@ -12,7 +12,15 @@ void rev_string(char *s)
 {
 	int str_len = strlen(s);
 	int a = str_len - 1;
+	int b = 0 ;
 
+	 while (b < str_len)
+        {
+                char j = s[a];
+                _putchar(j);
+                a++;
+        }
+	 
 	while (a >= 0)
 	{
 		char j = s[a];
