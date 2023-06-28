@@ -8,14 +8,14 @@
  *Return: Always 0
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int str_len = strlen(s);
-	int a = str_len -1;
+	int a = str_len - 1;
 
 	while (a >= 0)
 	{
-		char j = *(s+a);
+		char j = *(s + a);
 		_putchar(j);
 		a--;
 	}
