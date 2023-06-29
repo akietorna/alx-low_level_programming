@@ -13,19 +13,13 @@ void rev_string(char *s)
 	int str_len = strlen(s);
 	int a = str_len - 1;
 	int b = 0 ;
+	char temp[2000];
+	strcpy(temp , s);
 
-	 while (b < str_len)
-        {
-                char j = s[b];
-                _putchar(j);
-                b++;
-        }
-	 
 	while (a >= 0)
 	{
-		char j = s[a];
-		_putchar(j);
+		*(s + b) = temp[a];
 		a--;
+		b++;
 	}
-	_putchar('\n');
 }
