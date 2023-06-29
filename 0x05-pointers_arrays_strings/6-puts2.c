@@ -18,6 +18,7 @@ void puts2(char *s)
 		if (a % 2 == 0)
 		{
 			char j = *(s + a);
+			
 			_putchar(j);
 		}
 		a++;
