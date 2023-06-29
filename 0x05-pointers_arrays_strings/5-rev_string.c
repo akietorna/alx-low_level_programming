@@ -12,10 +12,10 @@ void rev_string(char *s)
 {
 	int str_len = strlen(s);
 	int a = str_len - 1;
-	int b = 0 ;
+	int b = 0;
 	char temp[2000];
-	strcpy(temp , s);
 
+	strcpy(temp, s);
 	while (a >= 0)
 	{
 		*(s + b) = temp[a];
