@@ -10,13 +10,14 @@
 
 void reverse_array(int *a, int n)
 {
-	int temp[100];
+	int temp[1000];
 	int b = 0;
 	int c = 0;
+	n--;
 
-	while (b < (n))
+	while (b <= n)
 	{
-		temp[c] = a[n - 1];
+		temp[c] = a[n];
 
 		n--;
 		c++;
