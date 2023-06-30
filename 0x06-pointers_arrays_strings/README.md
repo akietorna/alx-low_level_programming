@@ -1,0 +1,1 @@
+this project aims at buttressing the knowledge obtained on pointers, arrays and strings
