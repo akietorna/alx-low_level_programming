@@ -10,22 +10,22 @@
 
 void reverse_array(int *a, int n)
 {
+	int temp[100];
 	int b = 0;
+	int c = 0;
 
-	while (b < n)
+	while (b < (n))
 	{
-		int c = 0;
+		temp[c] = a[n - 1];
 
-		while (c < (n - 1))
-		{
-			if (a[c] < a[c + 1])
-			{
-				int temp = a[c];
-				*(a + c) = a[c + 1];
-				*(a + (c + 1)) = temp;
-			}
-			c++;
-		}
+		n--;
+		c++;
+	}
+
+	while(b <= c)
+	{
+		*(a + b) = temp[b];
+
 		b++;
 	}
 }
