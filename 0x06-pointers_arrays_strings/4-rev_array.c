@@ -21,7 +21,7 @@ void reverse_array(int *a, int n)
 			if (a[c] < a[c + 1])
 			{
 				int temp = a[c];
-				*(a + c) = a[c + 1];\
+				*(a + c) = a[c + 1];
 				*(a + (c + 1)) = temp;
 			}
 			c++;
