@@ -1,0 +1,16 @@
+#include "main.h"
+
+/**
+ *reverse_array - reverses an array of integers
+ *@a: pointer to the array
+ *@n: numbers of element in the array
+ *
+ *Return: Always 0
+ */
+
+void reverse_array(int *a, int n)
+{
+	int array[1000];
+	
+
+	while
