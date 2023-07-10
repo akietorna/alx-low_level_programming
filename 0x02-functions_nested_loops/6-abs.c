@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  *_abs - compute absolute value of numbers
@@ -8,9 +7,7 @@
  *Return: Always zero(success)
  */
 
-int abs(int j);
-
 int _abs(int j)
 {
-	return (abs(j));
+	return (j < 0 ? j * -1 : j);
 }
