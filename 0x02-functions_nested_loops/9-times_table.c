@@ -2,7 +2,7 @@
 
 /**
  *times_table - prints nine times table
- *big_value: prints values bigger than nine
+ *big_value - prints values bigger than nine
  *@value: takes in the value
  *Return: Always 0(success)
  */
@@ -12,7 +12,7 @@ void big_value(int value);
 
 void big_value(int value)
 {
-	if (value > 9)
+	if (value > 9 )
         {
 		int char_1 = (value / 10) % 10;
 		int char_2 = value % 10;
@@ -23,6 +23,7 @@ void big_value(int value)
         else
 	{
 		_putchar(value + '0');
+		
         }
 }
 
@@ -46,10 +47,13 @@ void times_table(void)
 			else
 			{
 				big_value(result);
-
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
+
+				if (result < 9)
+				{
+					_putchar(' ');
+				}
 			}
 
 			b++;
