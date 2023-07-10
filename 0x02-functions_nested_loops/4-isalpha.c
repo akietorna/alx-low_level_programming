@@ -6,9 +6,8 @@
  *@c : input character
  *Return: 1 if true and 0 if false
  */
-int isalpha(int c);
 
 int _isalpha(int c)
 {
-	return (isalpha(c) ? 1 : 0);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ? 1 : 0);
 }
