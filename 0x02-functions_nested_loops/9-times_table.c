@@ -4,6 +4,7 @@
  *times_table - prints nine times table
  *big_value - prints values bigger than nine
  *@value: takes in the value
+ *@b: takes value of the nth loop 
  *Return: Always 0(success)
  */
 
