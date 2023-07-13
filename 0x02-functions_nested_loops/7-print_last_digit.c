@@ -21,7 +21,7 @@ int print_last_digit(int j)
 	}
 	else
 	{
-		_putchar('0' + a);	
+		_putchar('0' + a);
 		return (a);
 	}
 }
