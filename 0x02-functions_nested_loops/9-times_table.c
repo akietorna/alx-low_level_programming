@@ -8,22 +8,27 @@
  */
 
 
-void big_value(int value);
+void big_value(int value, int b);
 
-void big_value(int value)
+void big_value(int value, int b)
 {
-	if (value > 9 )
+	if (value > 9)
         {
 		int char_1 = (value / 10) % 10;
 		int char_2 = value % 10;
 
+		_putchar(' ');
                 _putchar(char_1 + '0');
                 _putchar(char_2 + '0');
 	}
         else
 	{
-		_putchar(value + '0');
-		
+		if (b != 0)
+		{
+			_putchar(' ');
+			_putchar(' ');
+		}
+		_putchar(value + '0');	
         }
 }
 
@@ -42,18 +47,13 @@ void times_table(void)
 
 			if (b == 9)
 			{
-				big_value(result);
+				big_value(result, b);
+				_putchar('$');
 			}
 			else
 			{
-				big_value(result);
+				big_value(result, b);
 				_putchar(',');
-				_putchar(' ');
-
-				if (result < 9)
-				{
-					_putchar(' ');
-				}
 			}
 
 			b++;
