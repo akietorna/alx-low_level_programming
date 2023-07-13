@@ -2,6 +2,8 @@
 
 /**
  *add - adds two integers
+ *@a: takes the first value
+ *@b: takes the second value
  *Return: the result
  */
 
