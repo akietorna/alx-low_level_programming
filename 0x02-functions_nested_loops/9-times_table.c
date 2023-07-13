@@ -2,7 +2,7 @@
 
 /**
  *big_value - prints value
- *times_table - prints nine times table
+ *times_table: prints nine times table
  *@value: takes in the product of the nth value of the two loop
  *@b: takes in nth value of the 2nd loop
  *Return: Always 0(success)
@@ -30,7 +30,7 @@ void big_value(int value, int b)
 			_putchar(' ');
 		}
 		_putchar(value + '0');
-        }
+	}
 }
 
 
