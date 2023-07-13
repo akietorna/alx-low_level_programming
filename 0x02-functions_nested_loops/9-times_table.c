@@ -13,13 +13,13 @@ void big_value(int value, int b);
 void big_value(int value, int b)
 {
 	if (value > 9)
-        {
+	{
 		int char_1 = (value / 10) % 10;
 		int char_2 = value % 10;
 
 		_putchar(' ');
-                _putchar(char_1 + '0');
-                _putchar(char_2 + '0');
+		_putchar(char_1 + '0');
+		_putchar(char_2 + '0');
 	}
         else
 	{
@@ -28,7 +28,7 @@ void big_value(int value, int b)
 			_putchar(' ');
 			_putchar(' ');
 		}
-		_putchar(value + '0');	
+		_putchar(value + '0');
         }
 }
 
