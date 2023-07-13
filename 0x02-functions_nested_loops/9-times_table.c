@@ -33,8 +33,8 @@ void big_value(int value, int b)
 }
 
 /**
- *times_table: prints nine times table
- */  
+ *times_table - prints nine times table
+ */
 
 void times_table(void)
 {
