@@ -13,9 +13,9 @@ void print_result(int res)
 	int char1, char2, char3;
 
 	if (res > 99)
-        {
+	{
 		char1 = (res / 100) % 10;
-		char2 = (res /10) % 10;
+		char2 = (res / 10) % 10;
                 char3 = res % 10;
 
                 _putchar(char1 + '0');
@@ -24,7 +24,7 @@ void print_result(int res)
 	}
 	else if (res > 9 && res < 100)
         {
-		char1 = (res/10) % 10;
+		char1 = (res / 10) % 10;
                 char2 = res % 10;
 
                 _putchar(char1 + '0');
