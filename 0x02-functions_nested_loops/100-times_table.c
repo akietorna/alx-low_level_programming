@@ -43,7 +43,7 @@ void print_result(int res)
 
 void print_times_table(int n)
 {
-	if (n > 0 && n <= 15)
+	if (n >= 0 && n <= 15)
 	{
 		int a, b;
 
@@ -80,9 +80,5 @@ void print_times_table(int n)
 			}
 			_putchar('\n');
 		}
-	}
-	else
-	{
-		_putchar('0');
 	}
 }
