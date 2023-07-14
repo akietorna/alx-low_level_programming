@@ -16,24 +16,24 @@ void print_result(int res)
 	{
 		char1 = (res / 100) % 10;
 		char2 = (res / 10) % 10;
-                char3 = res % 10;
+		char3 = res % 10;
 
-                _putchar(char1 + '0');
-                _putchar(char2 + '0');
-                _putchar(char3 + '0');
+		_putchar(char1 + '0');
+		_putchar(char2 + '0');
+		_putchar(char3 + '0');
 	}
 	else if (res > 9 && res < 100)
-        {
+	{
 		char1 = (res / 10) % 10;
-                char2 = res % 10;
+		char2 = res % 10;
 
-                _putchar(char1 + '0');
-                _putchar(char2 + '0');
+		_putchar(char1 + '0');
+		_putchar(char2 + '0');
 	}
-        else if (res <= 9)
-        {
+	else if (res <= 9)
+	{
 		_putchar(res + '0');
-        }
+	}
 }
 
 /**
