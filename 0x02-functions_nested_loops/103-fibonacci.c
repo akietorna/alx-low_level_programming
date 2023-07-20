@@ -25,6 +25,6 @@ int main(void)
 		}
 		term++;
 	}
-	printf("%lu\n",result);
+	printf("%lu\n", result);
 	return (0);
 }
