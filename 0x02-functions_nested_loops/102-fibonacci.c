@@ -7,13 +7,13 @@
 
 int main(void)
 {
-	int a = 0;
-	int b = 1;
+        unsigned long int a = 0;
+	unsigned long int b = 1;
 	int n = 0;
 
 	while (n < 50)
 	{
-		long temp;
+		unsigned long int temp;
 
 		temp = a + b;
 
