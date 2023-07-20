@@ -19,7 +19,7 @@ int main(void)
 		a = b;
 		b = temp;
 
-		if (term % 2 == 0)
+		if (temp % 2 == 0)
 		{
 			result += temp;
 		}
