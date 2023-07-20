@@ -13,17 +13,17 @@ int main(void)
 
 	while (n < 50)
 	{
-		unsigned long int temp;
+		long temp;
 
 		temp = a + b;
 
 		if (n == 49)
 		{
-			printf("%lu\n", temp);
+			printf("%ld\n", temp);
 		}
 		else
 		{
-			printf("%lu, ", temp);
+			printf("%ld, ", temp);
 		}
 
 		a = b;
