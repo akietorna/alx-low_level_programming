@@ -16,8 +16,6 @@ int main(void)
 		unsigned long int temp;
 
 		temp = a + b;
-		a = b;
-		b = temp;
 
 		if (n == 49)
 		{
@@ -27,6 +25,10 @@ int main(void)
 		{
 			printf("%lu, ", temp);
 		}
+
+		a = b;
+		b = temp;
 	}
+	printf("\n");
 	return (0);
 }
