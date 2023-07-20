@@ -15,9 +15,9 @@ int main(void)
 	
 	for (a = 0; a < n; a++)
 	{
-		if (n % 3 == 0 || n % 5 == 0)
+		if (a % 3 == 0 || na% 5 == 0)
 		{
-			result += n;
+			result += a;
 		}
 	}
 	printf("%d\n", result);
