@@ -15,7 +15,7 @@ int main(void)
 	
 	for (a = 0; a < n; a++)
 	{
-		if (a % 3 == 0 || na% 5 == 0)
+		if (a % 3 == 0 || a% 5 == 0)
 		{
 			result += a;
 		}
