@@ -7,7 +7,7 @@
  *Return: Always(0)
  */
 
-void natural(void)
+void main(void)
 {
 	int n = 1024;
 	int result = 0;
