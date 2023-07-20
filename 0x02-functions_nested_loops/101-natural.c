@@ -12,8 +12,9 @@ void natural(void)
 {
 	int n = 1024;
 	int result = 0;
+	int a;
 	
-	for (int a = 0; a < n; a++)
+	for (a = 0; a < n; a++)
 	{
 		if (n % 3 = 0 || n % 5 = 0)
 		{
