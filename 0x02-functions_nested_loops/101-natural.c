@@ -16,7 +16,7 @@ void natural(void)
 	
 	for (a = 0; a < n; a++)
 	{
-		if (n % 3 = 0 || n % 5 = 0)
+		if (n % 3 == 0 || n % 5 == 0)
 		{
 			result += n;
 		}
