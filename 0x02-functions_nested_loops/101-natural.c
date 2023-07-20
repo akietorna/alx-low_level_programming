@@ -7,7 +7,7 @@
  *Return: Always(0)
  */
 
-void main(void)
+int main(void)
 {
 	int n = 1024;
 	int result = 0;
@@ -21,4 +21,5 @@ void main(void)
 		}
 	}
 	printf("%d\n", result);
+	return (0);
 }
