@@ -13,7 +13,7 @@ int main(void)
 
 	for (n = 0; n < 50; n++)
 	{
-		int temp;
+		double temp;
 
 		temp = a + b;
 		a = b;
