@@ -9,9 +9,9 @@ int main(void)
 {
 	int a = 0;
 	int b = 1;
-	int n;
+	int n = 0;
 
-	for (n = 0; n < 50; n++)
+	while (n < 50)
 	{
 		unsigned long int temp;
 
@@ -19,7 +19,7 @@ int main(void)
 
 		if (n == 49)
 		{
-			printf("%lu", temp);
+			printf("%lu\n", temp);
 		}
 		else
 		{
@@ -28,7 +28,7 @@ int main(void)
 
 		a = b;
 		b = temp;
+		n++;
 	}
-	printf("\n");
 	return (0);
 }
