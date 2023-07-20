@@ -13,7 +13,7 @@ int main(void)
 
 	for (n = 0; n < 50; n++)
 	{
-		double temp;
+		unsigned int temp;
 
 		temp = a + b;
 		a = b;
@@ -21,11 +21,11 @@ int main(void)
 
 		if (n == 49)
 		{
-			printf("%d", temp);
+			printf("%u", temp);
 		}
 		else
 		{
-			printf("%d, ", temp);
+			printf("%u, ", temp);
 		}
 	}
 	return (0);
