@@ -1,0 +1,14 @@
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+/**
+ *main - the starting point of the program
+ *Descripton: This program checks if a number is positve,negative or neutral
+ *@void: return nothing after code runs
+ *Return: Always 0 (success)
+ */
+
+int main(void)
+{
+	
