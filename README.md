@@ -1,1 +1,1 @@
-This project is about writting scripts that will run c files
+This project is about writting codes that will run c files
