@@ -1,0 +1,21 @@
+#include "main.h"
+
+/**
+ * _isupper - checks the case of the charather
+ * @c: characther to be checked
+ * returns 0 or 1
+ */
+
+int _isupper(int c)
+{
+	int* a = c;
+
+	if (*a >= "A" && *a <= "Z")
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
