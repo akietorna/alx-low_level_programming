@@ -16,7 +16,7 @@ int mul(int a, int b)
 		while (b > 0)
 		{
 			result += a;
-			b --;
+			b--;
 		}
 		return (result);
 	}
@@ -25,7 +25,7 @@ int mul(int a, int b)
 		while (a > 0)
 		{
 			result += b;
-			a --;
+			a--;
 		}
 		return (result);
 	}
@@ -34,8 +34,8 @@ int mul(int a, int b)
 		while (a < 0)
 		{
 			result += b;
-			a ++;
+			a++;
 		}
-		return result;
+		return (result);
 	}
 }
