@@ -1,11 +1,17 @@
 #include "main.h"
 
-int find_sqrt(int n,int gnum);
+int find_sqrt(int n, int gnum);
+
 /**
  *_sqrt_recursion -finds square root of a number
  *@n: number whose square root is found
  *Return: the squareroot
 */
+
+int _sqrt_recursion(int n)
+{
+	return (find_sqrt(n, 0));
+}
 
 /**
  *find_sqrt - checks for square root of a number
@@ -14,8 +20,7 @@ int find_sqrt(int n,int gnum);
  *Return: the squareroot
 */
 
-
-int find_sqrt(int n,int gnum)
+int find_sqrt(int n, int gnum)
 {
 	int sqrnum = gnum * gnum;
 
@@ -31,9 +36,4 @@ int find_sqrt(int n,int gnum)
 	{
 		return (find_sqrt(n, gnum + 1));
 	}
-}
-
-int _sqrt_recursion(int n)
-{
-	return (find_sqrt(n, 0));
 }
