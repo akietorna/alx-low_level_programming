@@ -2,7 +2,7 @@
 
 /**
  * main - print numbers from 1 to 100 with exceptions for multiples of 3, 5
- * Return: Always (0
+ * Return: Always (0)
  */
 
 int main(void)
@@ -13,23 +13,23 @@ int main(void)
 	{
 		if (a % 3 == 0 && a % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if (a % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else if (a % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
-		else if (a == 100)
+     		else
 		{
-			printf("Buzz");
+			printf("%d", a);
 		}
-		else
+		if (a != 100)
 		{
-			printf("%d ", a);
+			printf(" ");
 		}
 	}
 	printf("\n");
