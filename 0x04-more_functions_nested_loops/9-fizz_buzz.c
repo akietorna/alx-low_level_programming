@@ -23,6 +23,10 @@ int main(void)
 		{
 			printf("Fizz ");
 		}
+		else if (a == 100)
+		{
+			printf("Buzz");
+		}
 		else
 		{
 			printf("%d ", a);
