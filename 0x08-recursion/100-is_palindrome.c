@@ -36,7 +36,7 @@ int string_length(char *s)
 }
 
 /**
- *palindrome_check - checks palindrome
+ *palindrome_check - checks if a word is the same in the reversed direction
  *@s: string to work on
  *@n: length of string
  *@i: beginning of string
