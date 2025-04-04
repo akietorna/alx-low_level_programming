@@ -1,1 +1,1 @@
-This is a project that tests my basic understanding in conditionals in c.
+This is a project that tests my basic understanding on conditionals in c.
