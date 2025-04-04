@@ -9,19 +9,19 @@
 
 int main(void)
 {
-	char my_alphabet = 'a';
-	char my_U_alphabet = 'A';
+	char abc = 'a';
+	char ABC = 'A';
 
-	while (my_alphabet <= 'z')
+	while (abc <= 'z')
 	{
-		putchar(my_alphabet);
-		my_alphabet++;
+		putchar(abc);
+		abc++;
 	}
 
-	while (my_U_alphabet <= 'Z')
+	while (ABC <= 'Z')
 	{
-		putchar(my_U_alphabet);
-		my_U_alphabet++;
+		putchar(ABC);
+		ABC++;
 	}
 
 	putchar('\n');

@@ -9,33 +9,25 @@
 
 int main(void)
 {
-	int my_num = '0';
+	int a = 0;
+	int b = 0;
 
-	while (my_num <= '9')
+	while (a < 9)
 	{
-		int my_num2 = '1';
-
-		while (my_num2 <= '9')
+		while (b <= 9)
 		{
-			if (my_num != my_num2 && my_num < my_num2 && my_num < '9')
-			{
-				putchar(my_num);
-				putchar(my_num2);
-
-				if (my_num != '8')
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-
-			my_num2++;
+			putchar(a);
+			putchar(b);
 		}
 
-		my_num++;
+		if (a < 8 && b <= 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		a++;
+		b++;
 	}
-
 	putchar('\n');
-
 	return (0);
 }
