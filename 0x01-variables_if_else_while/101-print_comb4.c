@@ -11,23 +11,23 @@ int main(void)
 {
 	int a = '0';
 
-	while (a <= '9')
+	while (a < '8')
 	{
 		int b = '1';
 
-		while (b <= '9')
+		while (b < '9')
 		{
 			int c = '2';
 
 			while (c <= '9')
 			{
-				if (a != b && a != c && b != c && a < b && b < c && a < '8' && b < '9')
+				if (a != b && a != c && b != c && a < b && b < c)
 				{
 					putchar(a);
 					putchar(b);
 					putchar(c);
 
-					if (a != '7')
+					if (a != '7' && b != c)
 					{
 						putchar(',');
 						putchar(' ');
