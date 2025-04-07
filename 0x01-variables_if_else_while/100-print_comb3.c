@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int a = 0;
+	int a = '0';
 
 	while (a < '9')
 	{
@@ -27,8 +27,8 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-				b++;
 			}
+			b++;
 		}
 		a++;
 	}
