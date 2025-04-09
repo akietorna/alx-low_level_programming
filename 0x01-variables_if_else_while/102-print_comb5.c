@@ -32,12 +32,12 @@ int main(void)
 						putchar(' ');
 						putchar(c);
 						putchar(d);
-					}
 
-					if (b != '8')
-					{
-						putchar(',');
-						putchar(' ');
+						if (b != '8' || a != '9')
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 					d++;
 				}
