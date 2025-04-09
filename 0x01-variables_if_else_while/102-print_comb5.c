@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+/**
+ *main - entry point into the program
+ *Description: listing two double digit numbers
+ *@void: expect nothing at the end of the code
+ *Return: Always 0 (success)
+ */
+
+int main(void)
+{
+	int a = '0';
+
+	while (a <= '9')
+	{
+		int b = '0';
+
+		while (b < '9')
+		{
+			int c = '0';
+
+			while (c <= '9')
+			{
+				int d = '0';
+
+				while (d <= '9')
+				{
+					if (b < d && a <= c)
+					{
+						putchar(a);
+						putchar(b);
+						putchar(' ');
+						putchar(c);
+						putchar(d);
+					}
+
+					if (b != '8')
+					{
+						putchar(',');
+						putchar(' ');
+					}
+					d++;
+				}
+				c++;
+			}
+			b++;
+		}
+		a++;
+	}
+	putchar('\n');
+	return (0);
+}
