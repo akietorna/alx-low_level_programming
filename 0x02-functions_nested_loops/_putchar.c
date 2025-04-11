@@ -3,14 +3,12 @@
 
 /**
  *_putchar  - the starting point of program
- *Description - prints a string
- *w - takes in a character
- *Return: Always 0(success)
+ *Description - prints a character at a time, works like putchar
+ *c - placeholder of the character
+ *Return: The input character
  */
 
 int _putchar(char c)
 {
 	return(write(1, &c, 1));
 }
-
-
