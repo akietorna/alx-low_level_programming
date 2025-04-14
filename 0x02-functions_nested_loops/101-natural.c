@@ -8,11 +8,10 @@
 
 int main(void)
 {
-	int n = 1024;
 	int result = 0;
 	int a;
 
-	for (a = 0; a < n; a++)
+	for (a = 0; a < 1024; a++)
 	{
 		if (a % 3 == 0 || a % 5 == 0)
 		{
