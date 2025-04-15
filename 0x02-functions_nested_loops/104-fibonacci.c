@@ -7,14 +7,14 @@
 
 int main(void)
 {
-	unsigned long int a = 1;
-	unsigned long int b = 2;
+	unsigned long int a = 0;
+	unsigned long int b = 1;
 	unsigned long int sum = 0;
 	int n = 0;
 
-	while (n < 96)
+	while (n < 98)
 	{
-		if (n < 95)
+		if (n < 97)
 		{
 			sum = a + b;
 			printf("%lu, ", sum);
