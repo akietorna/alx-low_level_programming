@@ -9,33 +9,5 @@
 
 int mul(int a, int b)
 {
-	int result = 0;
-
-	if (b > 0)
-	{
-		while (b > 0)
-		{
-			result += a;
-			b--;
-		}
-		return (result);
-	}
-	else if (a > 0)
-	{
-		while (a > 0)
-		{
-			result += b;
-			a--;
-		}
-		return (result);
-	}
-	else
-	{
-		while (a < 0)
-		{
-			result += b;
-			a++;
-		}
-		return (result);
-	}
+	return (a * b);
 }
