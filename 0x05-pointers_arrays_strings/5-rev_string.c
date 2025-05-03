@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  *rev_string - print a string in the reverse order
@@ -10,16 +9,21 @@
 
 void rev_string(char *s)
 {
-	int str_len = strlen(s);
-	int a = str_len - 1;
-	int b = 0;
-	char temp[2000];
+	int len = 0;
+	int a = 0;
+	char temp;
 
-	strcpy(temp, s);
-	while (a >= 0)
+	while (s[len] != '\0')
 	{
-		*(s + b) = temp[a];
-		a--;
-		b++;
+		len++;
+	}
+	len--;
+	while (a < len)
+	{
+		temp = s[a];
+		s[a] = s[len];
+		s[len] = temp;
+		a++;
+		len--;
 	}
 }
