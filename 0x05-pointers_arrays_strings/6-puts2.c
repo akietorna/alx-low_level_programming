@@ -3,7 +3,7 @@
 
 /**
  *puts2 - prints even characthers from a string
- *@s: takes in string to be used
+ *@str: takes in string to be used
  *
  *Return: Always 0
  */
