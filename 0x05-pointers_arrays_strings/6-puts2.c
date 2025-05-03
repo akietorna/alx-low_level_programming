@@ -8,20 +8,17 @@
  *Return: Always 0
  */
 
-void puts2(char *s)
+void puts2(char *str)
 {
-	int str_len = strlen(s);
-	int a = 0;
+	int len = 0;
 
-	while (a < str_len)
+	while (str[len] != '\0')
 	{
-		if (a % 2 == 0)
+		if (len % 2 == 0)
 		{
-			char j = *(s + a);
-
-			_putchar(j);
+			_putchar(str[len]);
 		}
-		a++;
+		len++;
 	}
 	_putchar('\n');
 }
