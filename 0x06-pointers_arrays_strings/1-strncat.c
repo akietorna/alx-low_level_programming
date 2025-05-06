@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  *_strncat - joins two strings up to the nth byte
@@ -13,6 +12,18 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	strncat(dest, src, n);
+	int a = 0;
+	int b = 0;
+
+	while (dest[a] != '\0')
+	{
+		a++;
+	}
+	while ((b < n) && (src[b] != '\0'))
+	{
+		dest[a] = src[b];
+		a++;
+		b++;
+	}
 	return (dest);
 }
