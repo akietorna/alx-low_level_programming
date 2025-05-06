@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  *_strcpy - copies a string from a variable to another
@@ -11,6 +10,13 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	strcpy(dest, src);
+	int a = 0;
+
+	while (src[a] != '\0')
+	{
+		dest[a] = src[a];
+		a++;
+	}
+	dest[a] = '\0';
 	return (dest);
 }
