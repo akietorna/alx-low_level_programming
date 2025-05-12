@@ -2,6 +2,7 @@
 
 /**
  *_memset: fills the first n bytes of a memory space
+ *Description: fills a memory address' first n bytes
  *@s: pointer to the memory space to fill
  *@b: what to be used to fill the memory space
  *@n: the nuber of bytes needed to fill
@@ -11,6 +12,7 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int a = 0;
+
 	while (a < n)
 	{
 		s[a] = b;
