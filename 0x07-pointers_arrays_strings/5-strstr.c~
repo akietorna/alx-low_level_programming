@@ -1,0 +1,35 @@
+#include "main.h"
+#include <stddef.h>
+
+/**
+ *_strstr - finds the first occurance of a substring in a string
+ *@haystack: placeholder for the sring
+ *@needle: placeholder for the substring
+ *Return: pointer to the beginning of substring
+ */
+
+char *_strstr(char *haystack, char *needle)
+{
+	unsigned int a = 0;
+
+	if (*needle == '\0')
+	{
+		return (haystack);
+	}
+
+	while (haystack[a] != '\0')
+	{
+		unsigned int b = 0;
+
+		if (haystack[a + b] == needle[b])
+		{
+			if (needle[b + 1] == '\0')
+			{
+				return (haystack + a);
+			}
+			b++;
+		}
+		a++;
+	}
+	return (NULL);
+}
