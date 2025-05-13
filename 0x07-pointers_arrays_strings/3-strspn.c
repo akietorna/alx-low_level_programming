@@ -3,7 +3,7 @@
 /**
  *_strspn - checks the number of bytes in the initial segment of a string
  *@s: the segment string placeholder
- *@char: the string to compare the segment with
+ *@accept: the string to compare the segment with
  *Return: the number of bytes obtained
  */
 
