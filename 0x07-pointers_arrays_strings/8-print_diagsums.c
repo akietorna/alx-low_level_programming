@@ -1,0 +1,24 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ *print_diagsums - print the sum of two diagonals of a square matrix
+ *@a: the square matrix
+ *@size: the size of the square matrix
+ *Return: Nothing
+ */
+
+void print_diagsums(int *a, int size)
+{
+	long int sum = 0;
+	long int sum1 = 0;
+	int c = 0;
+
+	while (c < size)
+	{
+		sum += a[c * size + c];
+		sum1 += a[c * size + (size - 1 - c)];
+		c++;
+	}
+	printf("%ld, %ld\n", sum, sum1);
+}
