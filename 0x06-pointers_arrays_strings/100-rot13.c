@@ -1,0 +1,33 @@
+#include "main.h"
+
+/**
+ *rot13 - encode a string using rot13
+ *@s: string to be encoded
+ *
+ *Return: the encoded string
+ */
+
+char *rot13(char *s)
+{
+	unsigned int a = 0;
+	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char alpha2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	while (s[a] != '\0')
+	{
+		unsigned int b = 0;
+
+		while (alpha[b] != '\0')
+		{
+			if (alpha[b] == s[a])
+			{
+				s[a] = alpha2[b];
+				break;
+
+			}
+			b++;
+		}
+		a++;
+	}
+	return (s);
+}
