@@ -1,0 +1,30 @@
+#include "main.h"
+#include <stddef.h>
+
+/**
+ *_strpbrk - finds the first occurance of a charather in a string
+ *@s: the string on which the searchis to be done
+ *@accept: placeholder of the character used in the search
+ *Return: pointer to the first occurance of a character
+ */
+
+char *_strpbrk(char *s, char *accept)
+{
+	unsigned int a = 0;
+
+	while (s[a] != '\0')
+	{
+		unsigned int b = 0;
+
+		while (accept[b] != '\0')
+		{
+			if (s[a] == accept[b])
+			{
+				return (s + a);
+			}
+			b++;
+		}
+		a++;
+	}
+	return (NULL);
+}

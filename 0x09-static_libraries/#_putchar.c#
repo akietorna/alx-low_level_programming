@@ -1,0 +1,11 @@
+#include <unistd.h>
+#include "main.h"
+
+/**
+ *_putchar - print a character at a time
+ *@c: the character to print
+ *
+ *Return: the charather to print
+ */
+
+char 
