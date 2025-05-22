@@ -1,0 +1,1 @@
+This project aims at exploring uses of command line arguments.
