@@ -25,7 +25,7 @@ void whatsmyname(char *name)
 int main(int argc, char *argv[])
 {
 	(void)argc;
-	
+
 	whatsmyname(argv[0]);
 	return (0);
 }
