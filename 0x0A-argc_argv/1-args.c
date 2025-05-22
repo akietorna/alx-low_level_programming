@@ -11,7 +11,7 @@ void args(int arg);
 
 void args(int arg)
 {
-	printf("%i\n", arg);
+	printf("%d\n", arg);
 }
 
 /**
