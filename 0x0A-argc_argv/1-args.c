@@ -9,7 +9,7 @@
 
 void args(int arg)
 {
-	printf("%d\n", arg);
+	printf("%d\n", (arg - 1));
 }
 
 /**
@@ -24,6 +24,6 @@ int main(int argc, char *argv[])
 {
 	(void)argv;
 
-	args(argc - 1);
+	args(argc);
 	return (0);
 }
