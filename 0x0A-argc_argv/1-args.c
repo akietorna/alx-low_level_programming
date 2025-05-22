@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-void args(int arg);
-
 /**
  *args - prints the number of command line argument
  *@arg: the name of the programme
