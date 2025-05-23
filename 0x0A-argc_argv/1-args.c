@@ -14,7 +14,7 @@ void args(int arg)
 
 /**
  *main - enry point into the programme
- **@argc: placeholder of number of argument
+ *@argc: placeholder of number of argument
  *@argv: placeholder of the arguments
  *
  *Return: 0, success
