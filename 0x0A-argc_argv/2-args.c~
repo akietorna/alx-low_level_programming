@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include "main.h"
+
+
+/**
+ *args2 - prints all arguments including the name of the programme
+ *@name: pointer to the arguments
+ *Return: nothing
+ */
+
+void args2(char *name[])
+{
+	int n = 0;
+
+	while (name[n] != '\0')
+	{
+		printf("%s\n", name[n]);
+		n++;
+	}
+}
+
+/**
+ *main - enry point into the programme
+ **@argc: placeholder of number of argument
+ *@argv: placeholder of the arguments
+ *
+ *Return: 0, success
+ */
+
+int main(int argc, char *argv[])
+{
+	(void)argc;
+
+	args2(argv);
+	return (0);
+}
