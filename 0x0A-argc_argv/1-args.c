@@ -7,9 +7,9 @@
  *Return: nothing
  */
 
-void args(int arg)
+void args(int argc)
 {
-	printf("%d\n", (arg - 1));
+	printf("%d\n", (argc - 1));
 }
 
 /**
