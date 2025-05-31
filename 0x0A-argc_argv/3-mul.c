@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 
@@ -9,14 +10,17 @@
  *Return: nothing
  */
 
-void m(char *name[], int arg)
+int mul(char *name[], int arg)
 {
-	int n = 0;
-
-	while (n < arg)
+	if (arg == 3)
 	{
-		printf("%s\n", name[n]);
-		n++;
+		printf("%i\n", atoi(name[1]) * atoi(name[2]));
+		return (0);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
 	}
 }
 
@@ -30,6 +34,5 @@ void m(char *name[], int arg)
 
 int main(int argc, char *argv[])
 {
-	args2(argv, argc);
-	return (0);
+	return (mul(argv, argc));
 }
