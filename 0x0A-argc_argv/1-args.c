@@ -3,7 +3,7 @@
 
 /**
  *args - prints the number of command line argument
- *@arg: the name of the programme
+ *@argc: the name of the programme
  *Return: nothing
  */
 
