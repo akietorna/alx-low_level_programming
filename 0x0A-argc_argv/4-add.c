@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+
+
+/**
+ *add - add all integer arguments
+ *@name: pointer to the arguments
+ *@arg: the number of arguments
+ *Return: nothing
+ */
+
+int add(char *name[], int arg)
+{
+	int sum = 0;
+	int n = 1;
+
+	if (arg == 1)
+	{
+		printf("0\n");
+	}
+	else
+	{
+		while (n < arg)
+		{
+			if (atoi(name[n]) > 0)
+			{
+				sum += atoi(name[n]);
+				n++;
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		printf("%i\n", sum);
+	}
+	return (0);
+}
+
+
+/**
+ *main - enry point into the programme
+ **@argc: placeholder of number of argument
+ *@argv: placeholder of the arguments
+ *
+ *Return: 0, success
+ */
+
+int main(int argc, char *argv[])
+{
+	return (add(argv, argc));
+}
