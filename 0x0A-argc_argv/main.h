@@ -7,6 +7,7 @@ void args(int arg);
 void args2(char *name[], int arg);
 int mul(char *name[], int arg);
 int add(char *name[], int arg);
+int change(int money);
 
 
 #endif
