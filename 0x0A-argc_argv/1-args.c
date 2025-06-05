@@ -9,7 +9,7 @@
 
 void args(int argc)
 {
-	printf("%d\n", (argc - 1));
+	printf("%i\n", (argc - 1));
 }
 
 /**
