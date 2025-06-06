@@ -17,7 +17,7 @@ int str_count(char *str)
 	{
 		a++;
 	}
-	return (a);
+	return (a + 1);
 }
 
 
