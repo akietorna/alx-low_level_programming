@@ -82,7 +82,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	else if (s2 == NULL)
         {
-                int a = str_count(s1);
+		int a = str_count(s1);
                 char *str_con = (char *)malloc(a * sizeof(char));
 
                 if (str_con != NULL)
