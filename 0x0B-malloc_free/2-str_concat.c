@@ -106,7 +106,7 @@ char *str_concat(char *s1, char *s2)
 			int i = 0;
 
 			str_cop(s1, str_con, a);
-			while (i <= b)
+			while (i < b)
 			{
 				str_con[a + i] = s2[i];
 				i++;
