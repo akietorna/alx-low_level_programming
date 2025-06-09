@@ -68,7 +68,7 @@ char *str_concat(char *s1, char *s2)
 	else if (s1 == NULL)
 	{
 		int a = str_count(s2);
-		char *str_con = (char *)malloc((a + 1) * sizeof(char));
+		char *str_con = (char *)malloc(a * sizeof(char));
 
 		if (str_con != NULL)
 		{
@@ -83,7 +83,7 @@ char *str_concat(char *s1, char *s2)
 	else if (s2 == NULL)
         {
                 int a = str_count(s1);
-                char *str_con = (char *)malloc((a + 1) * sizeof(char));
+                char *str_con = (char *)malloc(a * sizeof(char));
 
                 if (str_con != NULL)
                 {
@@ -106,7 +106,7 @@ char *str_concat(char *s1, char *s2)
 			int i = 0;
 
 			str_cop(s1, str_con, a);
-			while (i < b)
+			while (i <= b)
 			{
 				str_con[a + i] = s2[i];
 				i++;
