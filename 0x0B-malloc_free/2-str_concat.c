@@ -25,6 +25,7 @@ int str_count(char *str)
  *str_cop - Copy a string
  *@str1: the string to copy
  *@str2: the reciepient location
+ *@a: string length
  *Return: nothing
  */
 
@@ -67,7 +68,7 @@ char *str_concat(char *s1, char *s2)
 	else if (s1 == NULL)
 	{
 		int a = str_count(s2);
-		char *str_con = (char *)malloc(a * sizeof(char));
+		char *str_con = (char *)malloc((a + 1) * sizeof(char));
 
 		if (str_con != NULL)
 		{
@@ -82,7 +83,7 @@ char *str_concat(char *s1, char *s2)
 	else if (s2 == NULL)
         {
                 int a = str_count(s1);
-                char *str_con = (char *)malloc(a * sizeof(char));
+                char *str_con = (char *)malloc((a + 1) * sizeof(char));
 
                 if (str_con != NULL)
                 {
