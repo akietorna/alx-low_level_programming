@@ -52,12 +52,11 @@ char *str_concat(char *s1, char *s2)
 {
 	if (s1 == NULL && s2 == NULL)
 	{
-		char *str_con = (char *)malloc(2 * sizeof(char));
+		char *str_con = (char *)malloc(1 * sizeof(char));
 
 		if (str_con != NULL)
 		{
-			str_con[0] = ' ';
-			str_con[1] = '\0';
+			str_con[0] = '\0';
 			return (str_con);
 		}
 		else
@@ -68,11 +67,12 @@ char *str_concat(char *s1, char *s2)
 	else if (s1 == NULL)
 	{
 		int a = str_count(s2);
-		char *str_con = (char *)malloc(a * sizeof(char));
+		char *str_con = (char *)malloc((a + 1) * sizeof(char));
 
 		if (str_con != NULL)
 		{
 			str_cop(s2, str_con, a);
+			str_con[a + 1] = '\0';
 			return (str_con);
 		}
 		else
@@ -83,11 +83,12 @@ char *str_concat(char *s1, char *s2)
 	else if (s2 == NULL)
         {
 		int a = str_count(s1);
-                char *str_con = (char *)malloc(a * sizeof(char));
+                char *str_con = (char *)malloc((a + 1) * sizeof(char));
 
                 if (str_con != NULL)
                 {
                         str_cop(s1, str_con, a);
+			str_con[a + 1] = '\0';
 			return (str_con);
                 }
                 else
@@ -99,7 +100,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		int a = str_count(s1);
 		int b = str_count(s2);
-		char *str_con = (char *)malloc((a + b) * sizeof(char));
+		char *str_con = (char *)malloc((a + b + 1) * sizeof(char));
 
 		if (str_con != NULL)
 		{
@@ -111,6 +112,7 @@ char *str_concat(char *s1, char *s2)
 				str_con[a + i] = s2[i];
 				i++;
 			}
+			str_con[a + b] = '\0';
 			return (str_con);
 		}
 		else
