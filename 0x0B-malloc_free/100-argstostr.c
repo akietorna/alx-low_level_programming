@@ -1,0 +1,76 @@
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ *count - gets the length of each argument
+ *@av: the argument
+ *Return: the length of the argument
+ */
+
+int count(char *av)
+{
+	int a = 0;
+
+	while (av[a] != '\0')
+	{
+		a++;
+	}
+	return (a + 1);
+}
+
+/**
+ *concat - contatenate strings
+ *@av: the source string
+ *@conc: reciepient array
+ *@i: current position in reciepient array
+ *Return: The current position of the reciepient array
+ */
+
+int concat(char *av, char *conc, int i)
+{
+	int a = 0;
+
+	while (av[a] != '\0')
+	{
+		conc[i] = av[a];
+		a++;
+		i++;
+	}
+	conc[i] = '\n';
+	return (i + 1);
+}
+
+/**
+ *argstostr - concatenate arguments
+ *@ac: number of arguments
+ *@av: the arguments
+ *Return: pointer to the concatenated string
+ */
+
+char *argstostr(int ac, char **av)
+{
+	char *conc;
+	int i, b;
+	int str_len = 0;
+
+	if ((ac == 0) || (av == NULL))
+	{
+		return (NULL);
+	}
+	for (i = 0; i < ac; i++)
+	{
+		str_len += count(av[i]);
+	}
+	conc = (char *)malloc((str_len + 1) * sizeof(char));
+	if (conc == NULL)
+	{
+		return (NULL);
+	}
+	i = 0;
+	for (b = 0; b < ac; b++)
+	{
+		i = concat(av[b], conc, i);
+	}
+	conc[i] = '\0';
+	return (conc);
+}
