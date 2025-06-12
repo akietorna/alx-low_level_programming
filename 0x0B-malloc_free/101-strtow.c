@@ -59,7 +59,7 @@ char **strtow(char *str)
 	int num;
 	char **spt_word;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' || *str == " ")
 	{
 		return (NULL);
 	}
@@ -80,10 +80,6 @@ char **strtow(char *str)
 
 			while (str[a] == ' ')
 			{
-				if (str[a + 1] == '\0' && b == 0)
-				{
-					return (NULL);
-				}
 				a++;
 			}
 			len = str_len(str, a);
