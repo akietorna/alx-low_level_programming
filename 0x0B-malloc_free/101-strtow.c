@@ -59,7 +59,7 @@ char **strtow(char *str)
 	int num;
 	char **spt_word;
 
-	if (str == NULL || str == '\0')
+	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
 	}
