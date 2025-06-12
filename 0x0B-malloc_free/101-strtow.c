@@ -80,6 +80,10 @@ char **strtow(char *str)
 
 			while (str[a] == ' ')
 			{
+				if (str[a + 1] == '\0' && b == 0)
+				{
+					return (NULL);
+				}
 				a++;
 			}
 			len = str_len(str, a);
