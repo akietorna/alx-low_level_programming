@@ -59,11 +59,15 @@ char **strtow(char *str)
 	int num;
 	char **spt_word;
 
-	if (str == NULL || *str == '\0' || *str == " ")
+	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
 	}
 	num = cnt_word(str);
+	if (num == 0)
+	{
+		return (NULL);
+	}
 	spt_word = (char **)malloc((num + 1) * sizeof(char *));
 	if (spt_word == NULL)
 	{
