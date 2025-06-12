@@ -32,6 +32,7 @@ int cnt_word(char *str)
 /**
  *str_len - counts the number of characthers in a word
  *@str: the word
+ *@a: current position in the string
  *Return: the number of character
  */
 
@@ -58,7 +59,7 @@ char **strtow(char *str)
 	int num;
 	char **spt_word;
 
-	if (str == NULL)
+	if (str == NULL || str == '\0')
 	{
 		return (NULL);
 	}
@@ -99,7 +100,7 @@ char **strtow(char *str)
 				spt_word[b][d] = str[a + d];
 			}
 			spt_word[b][d] = '\0';
-			a+=len;
+			a += len;
 		}
 		spt_word[num] = NULL;
 		return (spt_word);
