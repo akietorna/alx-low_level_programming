@@ -1,0 +1,1 @@
+This project aims at practicing dynamic memory allocation
