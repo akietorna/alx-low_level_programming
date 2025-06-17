@@ -1,0 +1,71 @@
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ *str_len - tells the length of a string
+ *@s: the string whose lengthto check
+ *Return: length of the string
+ */
+
+int str_len(char *s)
+{
+	unsigned int a = 0;
+
+	if (s == NULL)
+	{
+		return (0);
+	}
+	while(s[a] != '\0')
+	{
+		a++;
+	}
+	return (a);
+}
+
+
+/**
+ *string_nconcat - concatenate two strings up to n byte
+ *@s1: first string
+ *@s2: second string
+ *@n: the number of bytes of the second string to concatenate
+ *Return: pointer to the concatenated string
+ */
+
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	unsigned int a = 0;
+	unsigned int num = str_len(s1);
+	char *n_str = malloc((num + n + 1) * sizeof(char));
+
+	if (n_str == NULL)
+	{
+		return (NULL);
+	}
+	if (s1 != NULL)
+	{
+		while (a < num)
+		{
+			n_str[a] = s1[a];
+			a++;
+		}
+	}
+	a = 0;
+	if (s2 != NULL)
+	{
+		while ((a < n) && (s2[a] != '\0'))
+		{
+			n_str[a + num] = s2[a];
+			a++;
+		}
+	}
+	if ((a + num) < (num + n))
+	{
+		while ((a + num) < (num + n))
+		{
+			n_str[a + num] = '\0';
+			a++;
+		}
+	}
+	n_str[a + num] = '\0';
+	return (n_str);
+}
