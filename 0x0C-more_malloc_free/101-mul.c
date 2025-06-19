@@ -3,8 +3,9 @@
 
 void print_error(char *s);
 int check_int(char *s);
-unsigned int to_int(char *s);
-void print_result(unsigned int num);
+int len(char *s);
+char *multply(int len1, int len2, char *num1, char *num2);
+void print_result(char *result);
 
 /**
  *main - multiply two integer arguments
@@ -16,8 +17,9 @@ void print_result(unsigned int num);
 int main(int argc, char *argv[])
 {
 	char *s = "Error\n";
-	unsigned int num1;
-	unsigned int num2;
+	int num1;
+	int num2;
+	char *result;
 
 	if (argc != 3)
 	{
@@ -31,11 +33,28 @@ int main(int argc, char *argv[])
 		print_error(s);
 		exit(98);
 	}
-	num1 = to_int(argv[1]);
-	num2 = to_int(argv[2]);
-	print_result(num1 * num2);
+	result = multply(len(argv[1]), len(argv[2]), argv[1], argv[2]);
+	print_result(result);
 	_putchar('\n');
+	free(result);
 	return (0);
+}
+
+/**
+ *len - get length of a string
+ *@s: the string
+ *Return: length of the string
+ */
+
+int len(char *s)
+{
+	int a = 0;
+
+	while (s[a] != '\0')
+	{
+		a++;
+	}
+	return (a);
 }
 
 
@@ -79,35 +98,73 @@ int check_int(char *s)
 
 
 /**
- *to_int - convert string into integer
- *@s: the string
+ *multply - multiplies two large numbers
+ *@num1: the first number
+ *@len1: length of the first number
+ *@len2: length of the second number
+ *@num2: the second number
  *Return: int value
  */
 
-unsigned int to_int(char *s)
+char *multply(int len1, int len2, char *num1, char *num2)
 {
-	int a = 0;
-	unsigned int value = 0;
+	int a;
+	int b;
+	int c;
+	char *result = malloc((len1 + len2 + 1) * sizeof(char));
 
-	while (s[a] !=  '\0')
+	if (result == NULL)
 	{
-		value = (value * 10) + (s[a] - '0');
-		a++;
+		print_error("Error\n");
+		exit(98);
 	}
-	return (value);
+	for (c = 0; c <= (len1 + len2); c++)
+	{
+		result[c] = 0;
+	}
+	for (a = len1 - 1; a >= 0; a--)
+	{
+		for (b = len2 - 1; b >= 0; b--)
+		{
+			int pos1 = a + b;
+			int pos2 = a + b + 1;
+			int mult = 0;
+
+			mult = (num1[a] - '0') * (num2[b] - '0');
+			mult += result[pos2];
+			result[pos2] = mult % 10;
+			result[pos1] += mult / 10;
+		}
+	}
+	for (c = 0; c < (len1 + len2); c++)
+	{
+		result[c] += '0';
+	}
+	result[len1 + len2 + 1] = '\0';
+	return (result);
 }
 
 /**
  *print_result - print result of multiplication
- *@num: the result
+ *@result: the result
  *Return: Nothing
  */
 
-void print_result(unsigned int num)
+void print_result(char *result)
 {
-	if (num / 10)
+	int start = 0;
+	int a = 0;
+
+	while (result[a] != '\0')
 	{
-		print_result(num / 10);
+		if (result[a] != '0')
+		{
+			start = 1;
+		}
+		if (start == 1)
+		{
+			_putchar(result[a]);
+		}
+		a++;
 	}
-	_putchar((num % 10) + '0');
 }
