@@ -1,0 +1,113 @@
+#include <stdlib.h>
+#include "main.h"
+
+void print_error(char *s);
+int check_int(char *s);
+unsigned int to_int(char *s);
+void print_result(unsigned int num);
+
+/**
+ *main - multiply two integer arguments
+ *@argc: argument counter
+ *@argv: argument array
+ *Return: 0-success
+ */
+
+int main(int argc, char *argv[])
+{
+	char *s = "Error\n";
+	unsigned int num1;
+	unsigned int num2;
+
+	if (argc != 3)
+	{
+		print_error(s);
+		exit(98);
+	}
+	num1 = check_int(argv[1]);
+	num2 = check_int(argv[2]);
+	if (num1 == 1 || num2 == 1)
+	{
+		print_error(s);
+		exit(98);
+	}
+	num1 = to_int(argv[1]);
+	num2 = to_int(argv[2]);
+	print_result(num1 * num2);
+	_putchar('\n');
+	return (0);
+}
+
+
+/**
+ *print_error - print error message
+ *@s: error message
+ *Return: Nothing
+ */
+
+void print_error(char *s)
+{
+	int a = 0;
+
+	while (s[a] != '\0')
+	{
+		_putchar(s[a]);
+		a++;
+	}
+}
+
+/**
+ *check_int - check if argument is a positive integer
+ *@s: the argument
+ *Return: 0-true, 1- false
+ */
+
+int check_int(char *s)
+{
+	int a = 0;
+
+	while (s[a] != '\0')
+	{
+		if (!(s[a] >= '0' && s[a] <= '9'))
+		{
+			return (1);
+		}
+		a++;
+	}
+	return (0);
+}
+
+
+/**
+ *to_int - convert string into integer
+ *@s: the string
+ *Return: int value
+ */
+
+unsigned int to_int(char *s)
+{
+	int a = 0;
+	unsigned int value = 0;
+
+	while (s[a] !=  '\0')
+	{
+		value = (value * 10) + (s[a] - '0');
+		a++;
+	}
+	return (value);
+}
+
+/**
+ *print_result - print result of multiplication
+ *@num: the result
+ *Return: Nothing
+ */
+
+void print_result(unsigned int num)
+{
+	if (num / 10)
+	{
+		print_result(num / 10);
+	}
+	_putchar((num % 10) + '0');
+}
