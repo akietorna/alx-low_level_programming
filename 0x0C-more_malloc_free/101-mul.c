@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-void print_error(char *s);
+void print_error(void);
 int check_int(char *s);
 int len(char *s);
 char *multply(int len1, int len2, char *num1, char *num2);
@@ -16,26 +16,24 @@ void print_result(char *result);
 
 int main(int argc, char *argv[])
 {
-	char *s = "Error\n";
 	int num1;
 	int num2;
 	char *result;
 
 	if (argc != 3)
 	{
-		print_error(s);
+		print_error();
 		exit(98);
 	}
 	num1 = check_int(argv[1]);
 	num2 = check_int(argv[2]);
 	if (num1 == 1 || num2 == 1)
 	{
-		print_error(s);
+		print_error();
 		exit(98);
 	}
 	result = multply(len(argv[1]), len(argv[2]), argv[1], argv[2]);
 	print_result(result);
-	_putchar('\n');
 	free(result);
 	return (0);
 }
@@ -60,12 +58,12 @@ int len(char *s)
 
 /**
  *print_error - print error message
- *@s: error message
  *Return: Nothing
  */
 
-void print_error(char *s)
+void print_error(void)
 {
+	char *s = "Error\n";
 	int a = 0;
 
 	while (s[a] != '\0')
@@ -115,7 +113,7 @@ char *multply(int len1, int len2, char *num1, char *num2)
 
 	if (result == NULL)
 	{
-		print_error("Error\n");
+		print_error();
 		exit(98);
 	}
 	for (c = 0; c <= (len1 + len2); c++)
@@ -175,4 +173,5 @@ void print_result(char *result)
 			_putchar(result[b]);
 		}
 	}
+	_putchar('\n');
 }
