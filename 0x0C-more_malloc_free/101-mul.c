@@ -140,7 +140,7 @@ char *multply(int len1, int len2, char *num1, char *num2)
 	{
 		result[c] += '0';
 	}
-	result[len1 + len2 + 1] = '\0';
+	result[len1 + len2] = '\0';
 	return (result);
 }
 
@@ -152,8 +152,9 @@ char *multply(int len1, int len2, char *num1, char *num2)
 
 void print_result(char *result)
 {
-	int start = 0;
 	int a = 0;
+	int b;
+	int start = 0;
 
 	while (result[a] != '\0')
 	{
@@ -166,5 +167,12 @@ void print_result(char *result)
 			_putchar(result[a]);
 		}
 		a++;
+	}
+	if (start == '0')
+	{
+		for (b = 0; b < a; b++)
+		{
+			_putchar(result[b]);
+		}
 	}
 }
