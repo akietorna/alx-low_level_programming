@@ -166,7 +166,7 @@ void print_result(char *result)
 		}
 		a++;
 	}
-	if (start == '0')
+	if (start == 0)
 	{
 		for (b = 0; b < a; b++)
 		{
