@@ -1,0 +1,1 @@
+This project tests my undrestanding on #include, macros and the preprocessor
