@@ -6,6 +6,7 @@
  *@name: name of the dog
  *@age: age of the dog
  *@owner: owner of the dog
+ *Return: Pointer to the new dog location
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
