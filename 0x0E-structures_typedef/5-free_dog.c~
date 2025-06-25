@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include "dog.h"
+
+/**
+ *free_dog: frees the dog struct
+ *@d: the struct
+ *Return: Nothing
+ */
+
+void free_dog(dog_t *d)
+{
+	free(dog->name);
+	free(dog->owner);
+	free(d);
+}
