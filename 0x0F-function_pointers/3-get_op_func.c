@@ -3,7 +3,7 @@
 #include "3-calc.h"
 
 /**
- *get_op_func: determines which operand function to use
+ *get_op_func - determines which operand function to use
  *@s: the operand
  *Return: pointer to the correct operand function
  */
