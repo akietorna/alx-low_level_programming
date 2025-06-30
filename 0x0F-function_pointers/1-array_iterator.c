@@ -2,7 +2,7 @@
 #include "function_pointers.h"
 
 /**
- *array_iterator - it exectutes functions given to it on each element
+ *array_iterator - exectutes functions given to it on each element of an array
  *@array: provided array
  *@size: the size of the array
  *@action: provided function
@@ -11,10 +11,13 @@
 
 void array_iterator(int *array, size_t size, void(*action)(int))
 {
-	size_t a;
-
-	for (a = 0; a < size; a++)
+	if (array != NULL && size != NULL && action != NULL)
 	{
-		action(array[a]);
+		size_t a;
+
+		for (a = 0; a < size; a++)
+		{
+			action(array[a]);
+		}
 	}
 }
