@@ -12,20 +12,25 @@ int main(int argc, char *argv[])
 {
 	int a;
 	unsigned char *op = (unsigned char *)main;
+	int size = atoi(argv[1]);
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	if (atoi(argv[1]) < 0)
+	if (size < 0)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(2);
 	}
-	for (a = 0; a < atoi(argv[1]); a++)
+	for (a = 0; a < size; a++)
 	{
-		printf("%02x ", op[a]);
+		printf("%02x", op[a]);
+		if (a < size - 1)
+		{
+			printf(" ");
+		}
 	}
 	printf("\n");
 	return (0);
