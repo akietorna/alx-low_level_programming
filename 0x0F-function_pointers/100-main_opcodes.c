@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if (atoi(argv[1]) < 0)
 	{
 		printf("Error\n");
-		exit(2);
+		exit(1);
 	}
 	for (a = 0; a < atoi(argv[1]); a++)
 	{
