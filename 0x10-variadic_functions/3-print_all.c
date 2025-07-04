@@ -3,10 +3,6 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
-void print_int(va_list myargs);
-void print_char(va_list myargs);
-void print_float(va_list myargs);
-void print_str(va_list myargs);
 
 /**
  *print_int - prints integer arguments
@@ -54,23 +50,11 @@ void print_str(va_list myargs)
 	if (str == NULL)
 	{
 		printf("(nil)");
-		return ;
+		return;
 	}
 	printf("%s", str);
 }
 
-
-/**
- *struct print_ent - print different types of argument
- *@args: the argument
- *@print_func:  type of function to pick
- */
-
-typedef struct print_ent
-{
-	char args;
-	void (*print_func)(va_list myargs);
-} print_ent;
 
 /**
  *print_all - print all argument
