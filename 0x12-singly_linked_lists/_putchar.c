@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include "lists.h"
+
 /**
  *_putchar - prints a character
  *@c: the character
@@ -8,5 +9,5 @@
 
 int _putchar(char c)
 {
-	return (write(1,&c,1));
+	return (write(1, &c, 1));
 }
