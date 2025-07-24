@@ -1,0 +1,20 @@
+#include  "lists.h"
+#include <stdlib.h>
+
+/**
+ *add_nodeint_end - add a node to the end of linked list
+ *@head: the head of linked list
+ *@n: integer
+ *Return: pointer to new node
+ */
+
+listint_t *add_nodeint_end(listint_t **head, const int n)
+{
+	listint_t *temp = *head;
+
+	if (*head == NULL)
+	{
+		return (NULL);
+	}
+	(*head)->n = n;
+	(*head)->next = NULL;return
