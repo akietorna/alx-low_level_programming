@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- *free_listint - frees a linked list
+ *free_listint2 - frees a linked list
  *@head: the head of the list
  *Return: Nothing
  */
