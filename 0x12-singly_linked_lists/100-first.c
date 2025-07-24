@@ -10,5 +10,8 @@
 __attribute__((constructor))
 void before_main_print(void)
 {
-	printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	char *str1 = "You're beat! and yet, you must allow,\n";
+	char *str2 = "I bore my house upon my back!\n";
+
+	printf("%s%s", str1, str2);
 }
