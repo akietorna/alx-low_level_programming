@@ -1,0 +1,32 @@
+#include "lists.h"
+#include <stdlib.h>
+
+/**
+ *delete_nodeint_at_index - pop node at index of linked list
+ *@head: the head of linked list
+ *@index: the index
+ *Return: 1-success or -1-failure
+ */
+
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
+{
+	unsigned int a;
+	listint_t *delt;
+	listint_t *temp = *head;
+
+	if (index == 0)
+	{
+		
+	for (a = 0; a < (index -1); a++)
+	{
+		if (temp == NULL)
+		{
+			return (-1);
+		}
+		temp = temp->next;
+	}
+	delt = temp->next;
+	temp->next = temp->next->next;
+	free(delt);
+	return (1);
+}
