@@ -1,0 +1,33 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ *print_binary - convert a number to binary
+ *@n: the number
+ *Return: Nothing
+ */
+
+void print_binary(unsigned long int n)
+{
+	int val = (sizeof(n) * 8) - 1;
+	int status = 0;
+	int a;
+	int bit;
+
+	for (a = val; a >= 0; a--)
+	{
+		bit = (n >> a) & 1;
+		if (bit == 1 && status == 0)
+		{
+			status = 1;
+		}
+		if (status == 1)
+		{
+			_putchar(bit + '0');
+		}
+	}
+	if (status == 0)
+	{
+		_putchar('0');
+	}
+}
