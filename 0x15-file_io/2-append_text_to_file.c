@@ -26,6 +26,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	if (text_content == NULL)
 	{
+		close(fdes);
 		return (1);
 	}
 	while (text_content[a] != '\0')
@@ -35,7 +36,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	bw = write(fdes, text_content, a);
 	if (bw == -1)
 	{
+		close(fdes);
 		return (-1);
 	}
+	close(fdes);
 	return (1);
 }
