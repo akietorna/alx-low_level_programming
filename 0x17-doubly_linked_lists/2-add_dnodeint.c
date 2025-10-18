@@ -6,7 +6,7 @@
  *add_dnodeint - adds a node to the beginning of a linked list
  *@head: head of the linked list
  *@n: the integer of the node
- *Return: pointr to the node
+ *Return: pointer to the node
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
