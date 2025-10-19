@@ -11,26 +11,12 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *temp;
-	dlistint_t *temp2;
+	dlistint_t *temp, *temp2;
 	unsigned int a = 0;
 
 	if (idx == 0)
 	{
-		temp = malloc(sizeof(dlistint_t));
-		if (temp == NULL)
-		{
-			return (NULL);
-		}
-		temp->prev = NULL;
-		temp->next = *h;
-		temp->n = n;
-		*h = temp;
-		if (temp->next != NULL)
-		{
-			temp->next->prev = temp;
-		}
-		return (temp);
+		return (perf_zero(h, n));
 	}
 	temp = *h;
 	while (temp != NULL && a < idx)
@@ -49,11 +35,38 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			if (temp2->next != NULL)
 			{
 				temp2->next->prev = temp2;
-		       	}
+			}
 			return (temp2);
 		}
 		a++;
 		temp = temp->next;
 	}
 	return (NULL);
+}
+
+/**
+ *perf_zero - works if index is zero
+ *@h: head node
+ *@n: integer to insert
+ *Return: address of inserted node
+ */
+
+dlistint_t *perf_zero(dlistint_t **h, int n)
+{
+	dlistint_t *temp;
+
+	temp = malloc(sizeof(dlistint_t));
+	if (temp == NULL)
+	{
+		return (NULL);
+	}
+	temp->prev = NULL;
+	temp->next = *h;
+	temp->n = n;
+	*h = temp;
+	if (temp->next != NULL)
+	{
+		temp->next->prev = temp;
+	}
+	return (temp);
 }
