@@ -25,7 +25,7 @@ int palindrome(int a)
  *Return: Always 0
  */
 
-int main()
+int main(void)
 {
 	int a, b;
 	int max = 0;
